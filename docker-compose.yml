@@ -5,7 +5,7 @@ services:
     ports:
      - "4000:8983"
     volumes:
-      - data:/opt/solr/server/solr/mycores
+      - ./mydata:/opt/solr/server/mydata #Esure I could pass data to solr cores.
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
